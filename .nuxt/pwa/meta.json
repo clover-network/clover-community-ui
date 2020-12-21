@@ -1,5 +1,5 @@
 {
-  "title": "ark-frontend",
+  "title": "clover-faucet",
   "meta": [
     {
       "hid": "charset",
@@ -18,7 +18,7 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "ark-frontend"
+      "content": "clover-faucet"
     },
     {
       "hid": "og:type",
@@ -30,13 +30,13 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "ark-frontend"
+      "content": "clover-faucet"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "ark-frontend"
+      "content": "clover-faucet"
     }
   ],
   "link": [
@@ -46,7 +46,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.41650c46.json",
+      "href": "/_nuxt/manifest.456f86fa.json",
       "hid": "manifest"
     }
   ],
