@@ -1,5 +1,10 @@
 <template>
   <div class="wrapper">
+    <loading :active.sync="isLoading" 
+        :can-cancel="false"
+        :color="'#4BA871'"
+        :width="50"
+        :is-full-page="fullPage"></loading>
     <div class="img-wrapper"><img src="~/assets/images/girl.png"/></div>
     <div class="container">
         <div class="faucet-title">Clover Authenticated Faucet</div>
@@ -21,14 +26,22 @@
 </template>
 
 <script>
+    import Loading from 'vue-loading-overlay';
+    // Import stylesheet
+    import 'vue-loading-overlay/dist/vue-loading.css';
     export default {
         data() {
             return {
                 totalStorage: '0',
                 totalNode: '0',
                 text: "",
-                failPath: '~/assets/svgs/fail.svg'
+                failPath: '~/assets/svgs/fail.svg',
+                isLoading: false,
+                fullPage: true
             }
+        },
+        components: {
+            Loading
         },
         methods: {
             async getToken() {
@@ -47,8 +60,9 @@
                     noCloseButton: true
                 }
                 try {
+                    this.isLoading = true;
                     let res = await this.$axios.get(`https://faucet-api.clovernode.com/clover/api/faucet/${this.text}`)
-                    console.log(`${res}`)
+                    this.isLoading = false;
                     if(res.status === 200) {
                         if (res.data.success === true) {
                             let vnode = h(
