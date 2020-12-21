@@ -3,7 +3,7 @@ import Cookie from "cookie"
 
 export default function (ctx) {
   if (process.server) {
-    const cookies = Cookie.parse(ctx.req.headers.cookie || "")
+    const cookies = Cookie.parse(ctx.req && ctx.req.headers.cookie || "")
     const cookiesLocale = cookies.locale || "en"
     const defaultLocale = cookiesLocale || ctx.app.i18n.fallbackLocale
     ctx.app.i18n.locale = defaultLocale
