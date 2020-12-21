@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/deyangliu/samplecode/clover-network/clover-community-ui/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_5fb5d2b4"
+    "chunkName": "pages/index"
   }
 ]

@@ -138,7 +138,7 @@
     .wrapper {
         position: relative;
         margin-top: 200px;
-        overflow: auto;
+        overflow: hidden;
 
         .img-wrapper {
             position: absolute;
