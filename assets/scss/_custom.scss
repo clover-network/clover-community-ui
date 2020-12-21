@@ -1,0 +1,38 @@
+// custom.scss
+
+// All of your custom SCSS variables go first
+
+$light: #f1f1f1;
+$mainColor: #eb761c;
+$navBgColor: rgb(0, 0, 0);
+$secondary: #ffffff;
+
+$dark: $navBgColor;
+$warning: $mainColor;
+$component-active-color: $mainColor;
+.btn-custom {
+  font-family: nasalization;
+  padding: 0.5rem 3rem;
+  border-radius: 25px;
+  border: 1px solid $mainColor;
+  background-color: transparent;
+  color: $mainColor;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+  &:hover {
+    color: #fff;
+    background-color: $mainColor;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+$bgColorTm: #343434;
+$bgColorTmItem: $dark;
+
+.main-text {
+  color: $mainColor;
+  font-size: 36px;
+}
