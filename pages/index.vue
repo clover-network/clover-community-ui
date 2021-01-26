@@ -20,7 +20,7 @@
                 Give me CLV
             </button>
         </div>
-        <div class="bottom-text">Type you Address and get 100 CLV test tokens per day.</div>
+        <div class="bottom-text">Type you Address and get 200 CLV test tokens per day.</div>
     </div>
   </div>
 </template>
