@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <loading :active.sync="isLoading" 
+    <loading :active.sync="isLoading"
         :can-cancel="false"
         :color="'#4BA871'"
         :width="50"
@@ -10,9 +10,9 @@
         <div class="faucet-title">Clover Authenticated Faucet</div>
         <div class="form-container">
             <div class="ipt-container">
-                <b-form-input 
-                        v-model="text" 
-                        placeholder="Input your Ethereum or Clover Address…"  
+                <b-form-input
+                        v-model="text"
+                        placeholder="Input your Ethereum or Clover Address…"
                         class="ipt">
                 </b-form-input>
             </div>
@@ -20,7 +20,7 @@
                 Give me CLV
             </button>
         </div>
-        <div class="bottom-text">Type you Address and get 100 CLV test tokens per day.</div>
+        <div class="bottom-text">Type you Address and get 10 CLV test tokens per day.</div>
     </div>
   </div>
 </template>
@@ -67,7 +67,7 @@
                         if (res.data.success === true) {
                             let vnode = h(
                                 'div',
-                                { 
+                                {
                                     style: styleDiv
                                 },
                                 [
@@ -80,10 +80,10 @@
                                     ),
                                     h(
                                         'div',
-                                        { 
+                                        {
                                             style: styelMargin
                                         },
-                                        'Successfully got 100 CLVs'
+                                        'Successfully got 10 CLVs'
                                     )
                                 ]
                             )
@@ -92,7 +92,7 @@
                         else {
                             let vnode = h(
                                 'div',
-                                { 
+                                {
                                     style: styleDiv
                                 },
                                 [
@@ -105,7 +105,7 @@
                                     ),
                                     h(
                                         'div',
-                                        { 
+                                        {
                                             style: styelMargin
                                         },
                                         res.data.message
@@ -119,7 +119,7 @@
                 } catch(e) {
                     let vnode = h(
                                 'div',
-                                {   
+                                {
                                     style: styleDiv
                                 },
                                 [
@@ -132,7 +132,7 @@
                                     ),
                                     h(
                                         'div',
-                                        { 
+                                        {
                                             style: styelMargin
                                         },
                                         'Failed to get CLV'
@@ -141,7 +141,7 @@
                             )
                     this.$bvToast.toast([vnode], options)
                 }
-                
+
             }
         }
 
@@ -201,7 +201,7 @@
                 width: 192px;
                 height: 88px;
                 border-radius: 48px;
-                background-color: #4BA871;     
+                background-color: #4BA871;
                 color: white;
                 font-size: 26px;
                 outline: none;
@@ -221,6 +221,6 @@
             }
         }
     }
-    
-    
+
+
 </style>
